@@ -136,7 +136,7 @@ public class binTree {
 
       int num = scan.nextInt();
 
-      node.inorder(node);
+      node.inorder(Root);
       System.out.println("\nВы хотите продолжить? (введите y или n)");
       ch = scan.next().charAt(0);
     }
