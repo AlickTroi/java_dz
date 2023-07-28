@@ -1,0 +1,41 @@
+Задание 2
+try {
+   int d = 0;           
+   double catchedRes1 = intArray[8] / d;
+   System.out.println("catchedRes1 = " + catchedRes1);
+} catch (ArithmeticException e) {
+   System.out.println("Catching exception: " + e);
+}
+
+
+Ответ на задание 2: --- int d = 0; создать и присвоить значение можно и за блоком,
+double catchedRes1 = intArray[8] / d; --- возможно в intArray[8] нет значения поэтому надо добавить исключение ArrayIndexOutOfBoundsException,
+
+
+Задание 3
+
+public static void main(String[] args) throws Exception {
+   try {
+       int a = 90;
+       int b = 3;
+       System.out.println(a / b);
+       printSum(23, 234);
+       int[] abc = { 1, 2 };
+       abc[3] = 9;
+   } catch (Throwable ex) {
+       System.out.println("Что-то пошло не так...");
+   } catch (NullPointerException ex) {
+       System.out.println("Указатель не может указывать на null!");
+   } catch (IndexOutOfBoundsException ex) {
+       System.out.println("Массив выходит за пределы своего размера!");
+   }
+}
+public static void printSum(Integer a, Integer b) throws FileNotFoundException {
+   System.out.println(a + b);
+}
+
+Ответ на задание 3:
+catch (Throwable ex)  ---  это исключение поставить в конец тк в началеоно будет ловить все ошибки
+public static void printSum(Integer a, Integer b) throws FileNotFoundException --- FileNotFoundException не нужен тк он не работает с файлами
+ а если он  не нужен то и в public static void main(String[] args) throws Exception --- Exception не нужен
+
